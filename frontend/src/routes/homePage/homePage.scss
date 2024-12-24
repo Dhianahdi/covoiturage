@@ -1,0 +1,106 @@
+@import "../../responsive.scss";
+.homePage {
+  max-height: 100vh; /* Restrict to viewport height */
+  overflow-y: scroll; /* Always show vertical scrollbar */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  padding-right: 10px; /* Adjust spacing to avoid content cutting off */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  // Main Text Section
+  .textContainer {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem 1rem;
+
+    .wrapper {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .title {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #333;
+
+        @include md {
+          font-size: 2.5rem;
+        }
+        @include sm {
+          font-size: 2rem;
+        }
+      }
+
+      .description {
+        color: #555;
+        font-size: 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      // Statistics Boxes
+      .boxes {
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        .box {
+          background: #ff6b6b;
+          color: white;
+          border-radius: 12px;
+          padding: 1.5rem;
+          width: 200px;
+          text-align: center;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+          .statNumber {
+            font-size: 2.5rem;
+            font-weight: bold;
+          }
+
+          p {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Section for Hero, Pricing, Testimonials, Workflow
+  .section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  // Footer Styling
+  footer {
+    width: 100%;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+
+    a {
+      color: #ffa07a;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

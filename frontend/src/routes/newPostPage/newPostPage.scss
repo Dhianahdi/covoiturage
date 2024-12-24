@@ -1,0 +1,78 @@
+.newPostPage {
+  height: 100%;
+  display: flex;
+
+  .formContainer {
+    flex: 3;
+    padding: 20px;
+    overflow-y: auto;
+
+    .wrapper {
+      margin: 30px 50px 100px 0px;
+
+      form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .item {
+          width: 30%;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          input {
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid gray;
+          }
+
+          select {
+            padding: 19px;
+          }
+        }
+
+        .sendButton {
+          width: 30%;
+          border-radius: 5px;
+          border: none;
+          background-color: teal;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .mapContainer {
+    flex: 2;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .map {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .formContainer {
+      flex: none;
+      width: 100%;
+    }
+
+    .mapContainer {
+      flex: none;
+      width: 100%;
+      height: 300px;
+      margin-top: 20px;
+    }
+  }
+}
